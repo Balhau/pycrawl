@@ -1,1 +1,1 @@
-killall python 
+kill $(ps aux | grep 'python pycrawl' | awk '{print $2}')
