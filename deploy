@@ -1,0 +1,2 @@
+VERSION=$1
+scp -P 6 dist/omxclient-$VERSION.tar.gz balhau@balhau.net:/var/www/pythonpip/simple/omxclient

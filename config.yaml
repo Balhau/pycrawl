@@ -1,0 +1,5 @@
+kafka:
+  hosts:
+  - "localhost:9092"
+  topics:
+    portscan: "scanner.ports"

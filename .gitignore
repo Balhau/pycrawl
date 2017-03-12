@@ -1,0 +1,10 @@
+venv/
+tests/__pycache__/
+*.pyc
+.project
+.pydevproject
+.eggs/
+.tox/
+build/
+dist/
+omxclient.egg-info/
