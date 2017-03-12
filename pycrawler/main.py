@@ -22,6 +22,7 @@ with open(CONFIG_FILE,'r') as f:
 	props = yaml.load(f)
 
 portscanntopic = props['kafka']['topics']['portscan']
+zookeeper_path = props['zookeeper']['path']
 
 print "Loaded props: %s" % props
 print "Portscan kafka topic: %s" % portscanntopic
@@ -32,7 +33,7 @@ class CrawlerCluster():
 	def __init__(self,zk_root,children=None):
 		self.zk_root=zk_root
 		self.children = children
-		self.zk = KazooClient(hosts='127.0.0.1:2181')
+		self.zk = KazooClient(hosts=zookeeper_path)
 
 	def watch_peers(self,children):
 		#set another watch
