@@ -1,10 +1,11 @@
 #/bin/bash
 
 NUM=$1
+DELAY=$2
 echo $NUM
 for i in `seq 1 $NUM`
 do
  python pycrawler/main.py > /dev/null &
  echo "Started process: $i"
- sleep 1
+ sleep $DELAY
 done
