@@ -42,11 +42,12 @@ class CrawlerCluster():
 
 	def connectZookeeper(self):
 		print "Registering to Cluster"
+		host = socket.gethostname()
 		self.zk.start()
-		self.zk.ensure_path(self.zk_root+"/"+socket.gethostname())
+		self.zk.ensure_path(self.zk_root+"/"+host)
 		self.children = self.zk.get_children(self.zk_root, watch=self.watch_peers)
 		self.uid = str(uuid.uuid1())
-		self.zk.create(self.zk_root+"/"+self.uid,self.uid,ephemeral = True)
+		self.zk.create(self.zk_root+"/"+host+"/"+self.uid,self.uid,ephemeral = True)
 
 
 	def scanPorts(self):
