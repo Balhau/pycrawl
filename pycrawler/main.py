@@ -61,6 +61,7 @@ class CrawlerCluster():
 			message['ip']=ip
 			message['ports']=ports
 			message['crawlerid']=self.uid
+			message['crawlerhost']=socket.gethostname()
 			msgstr=json.dumps(message)
 			kp.send(props['kafka']['topics']['portscan'],msgstr,ip)
 			print ports
