@@ -37,3 +37,5 @@ The **crawler** command spawns threads and the **kcrawler** kills them. The firs
 
 
     ./crawler <number_of_process> <interval_between_process_spawn>
+
+A more detailed talk about this project can be read [here](https://codecorner.balhau.net/2017/03/12/a-distributed-crawler/)
