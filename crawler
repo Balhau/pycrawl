@@ -5,7 +5,7 @@ DELAY=$2
 echo $NUM
 for i in `seq 1 $NUM`
 do
- python pycrawler/main.py > /dev/null &
+ python pycrawler/scanner.py > /dev/null &
  echo "Started process: $i"
  sleep $DELAY
 done
