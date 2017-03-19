@@ -53,7 +53,6 @@ class CrawlerCluster():
 
 	def scanPorts(self):
 		while(True):
-			time.sleep(1)
 			#print "Peers : %s" % len(self.children)
 			ip = IpUtils.randomIPV4()
 			print "Scanning: %s" % ip
