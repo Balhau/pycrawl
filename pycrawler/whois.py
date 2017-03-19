@@ -41,6 +41,7 @@ def whoisProcessor():
                 out={}
                 out['whois']=w.lookup_rdap()
                 out['geoip']=gir
+                out['ports']=node['ports']
                 message_out=json.dumps(out)
                 kp.send(port_scan_enrich_topic,message_out,msg.key)
             except Exception as e:
