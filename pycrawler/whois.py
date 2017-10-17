@@ -8,6 +8,7 @@ from pprint import pprint
 
 CONFIG_FILE = "config.yaml"
 props=None
+
 with open(CONFIG_FILE,'r') as f:
     props=yaml.load(f)
 

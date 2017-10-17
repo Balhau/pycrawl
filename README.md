@@ -24,6 +24,11 @@ Next you need to install some external dependencies with **pip**
     pip install kafka-python #for kafka dependencies
     pip install pyyaml  #for yaml file property reading
 
+
+## Running 
+
+### Port scanner
+
 After this steps you should be able to run the application by typing in the command line
 
     python pycrawl/main.py #from your main source directory
@@ -37,5 +42,15 @@ The **crawler** command spawns threads and the **kcrawler** kills them. The firs
 
 
     ./crawler <number_of_process> <interval_between_process_spawn>
+
+### Whois scanner
+
+The whois scanner use the *port scanner* topic and for those ip which had open ports it will make a whois call to fetch more information regarding the host.
+
+### Statistics tool
+
+There is a file called *statistics.py* that will render relevant statistical information that will be collected from the topics
+
+
 
 A more detailed talk about this project can be read [here](https://codecorner.balhau.net/2017/03/12/a-distributed-crawler/)
