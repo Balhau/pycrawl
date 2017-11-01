@@ -23,7 +23,7 @@ zookeeper_path = props['zookeeper']['path']
 print "Loaded props: %s" % props
 print "Portscan kafka topic: %s" % portscanntopic
 
-kp=KafkaProducer(bootstrap_servers=props['kafka']['hosts'])
+kp=KafkaProducer(bootstrap_servers=props['kafka']['hosts'],api_version='0.9')
 
 class CrawlerCluster():
 	def __init__(self,zk_root,children=None):
