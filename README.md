@@ -53,4 +53,4 @@ There is a file called *statistics.py* that will render relevant statistical inf
 
 
 
-A more detailed talk about this project can be read [here](https://codecorner.balhau.net/2017/03/12/a-distributed-crawler/)
+A more detailed talk about this project can be read [here](http://codecorner.balhau.net/a-distributed-crawler/)
